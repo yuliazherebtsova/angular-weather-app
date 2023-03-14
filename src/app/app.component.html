@@ -1,9 +1,19 @@
-<div class="main-container">
+<div class="app-wrapper">
   <div class="weather-container">
     <div class="image-container">
-      <img class="image" src="../assets/cold.jpeg" *ngIf="true" />
-      <img class="image" src="../assets/hot.jpeg" *ngIf="false" />
+      <img class="image" src="../assets/vey-cold.jpeg" *ngIf="0 < -17" />
+      <img class="image" src="../assets/cold.jpeg" *ngIf="(0 < -17) && (0 > 9)" />
+      <img class="image" src="../assets/cool.jpeg" *ngIf="0 < -17" />
+      <img class="image" src="../assets/warm.jpeg" *ngIf="0 < -17" />
+      <img class="image" src="../assets/hot.jpeg" *ngIf="0 < -17" />
+      <img class="image" src="../assets/very-hot.jpeg" *ngIf="0 < -17" />
+      <div class="temperature-container">
+        <p class="location">Winnipeg</p>
+        <p class="temperature">{{ -22.40 | number : "1.0-0" }}&deg;C</p>
+      </div>
     </div>
-    <div class="info-container"></div>
+  </div>
+  <div class="info-container">
+    <p class="more-info-text"></p>
   </div>
 </div>
