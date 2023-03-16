@@ -104,7 +104,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
-  justify-items: center;
 }
 
 .min-temperature-container,
@@ -121,7 +120,6 @@
 .max-temperature-image,
 .humidity-image,
 .wind-image {
-  z-index: 1;
   width: 55px;
   height: 55px;
   margin: 6px;
