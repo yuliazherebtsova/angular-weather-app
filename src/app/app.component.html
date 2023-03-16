@@ -1,19 +1,44 @@
 <div class="app-wrapper">
   <div class="weather-container">
     <div class="image-container">
-      <img class="image" src="../assets/vey-cold.jpeg" *ngIf="0 < -17" />
-      <img class="image" src="../assets/cold.jpeg" *ngIf="(0 < -17) && (0 > 9)" />
-      <img class="image" src="../assets/cool.jpeg" *ngIf="0 < -17" />
-      <img class="image" src="../assets/warm.jpeg" *ngIf="0 < -17" />
-      <img class="image" src="../assets/hot.jpeg" *ngIf="0 < -17" />
-      <img class="image" src="../assets/very-hot.jpeg" *ngIf="0 < -17" />
+      <img class="image" src="../assets/very-cold.jpeg" *ngIf="!true" />
+      <img class="image" src="../assets/cold.jpeg" *ngIf="!true" />
+      <img class="image" src="../assets/cool.jpeg" *ngIf="!true" />
+      <img class="image" src="../assets/warm.jpeg" *ngIf="!true" />
+      <img class="image" src="../assets/hot.jpeg" *ngIf="true" />
+      <img class="image" src="../assets/very-hot.jpeg" *ngIf="!true" />
       <div class="temperature-container">
-        <p class="location">Winnipeg</p>
-        <p class="temperature">{{ -22.40 | number : "1.0-0" }}&deg;C</p>
+        <span class="location">Winnipeg</span>
+        <span class="temperature">{{ -22.4 | number : "1.0-0" }}&deg;C</span>
+        <span class="feels-like"
+          >feels like {{ -22.4 | number : "1.0-0" }}&deg;C</span
+        >
+      </div>
+      <div class="info-container">
+        <p class="info-text">More Information</p>
+        <div class="details-container">
+          <div class="min-temperature-container">
+            <img class="min-temperature-image" src="../assets/min.svg" />
+            <span class="min-temperature-text"
+              >{{ -22.4 | number : "1.0-0" }}&deg;C</span
+            >
+          </div>
+          <div class="max-temperature-container">
+            <img class="max-temperature-image" src="../assets/max.svg" />
+            <span class="max-temperature-text"
+              >{{ 22.4 | number : "1.0-0" }}&deg;C</span
+            >
+          </div>
+          <div class="humidity-container">
+            <img class="humidity-image" src="../assets/humidity.svg" />
+            <span class="humidity-text">{{ 80 | number : "1.0-0" }}%</span>
+          </div>
+          <div class="wind-container">
+            <img class="wind-image" src="../assets/wind.svg" />
+            <span class="wind-text">{{ 80 | number : "1.0-0" }}&nbsp;km/h</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="info-container">
-    <p class="more-info-text"></p>
   </div>
 </div>
