@@ -13,21 +13,20 @@
 .weather-container {
   width: 100%;
   height: 80vh;
-  max-width: 400px;
-  max-height: 800px;
-  color: #224;
-  background: rgba( 255, 255, 255, 0.05 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 16.5px );
-  -webkit-backdrop-filter: blur( 16.5px );
+  max-width: 492px;
+  max-height: 760px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
   border-radius: 30px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 )
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .image-container {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: 60%;
 }
 
 .image {
@@ -56,7 +55,7 @@
   font-weight: 800;
   text-align: center;
   color: white;
-  text-shadow: 8px 6px 28px rgba(0,0,0,0.65);
+  text-shadow: 8px 6px 28px rgba(0, 0, 0, 0.65);
 }
 
 .temperature {
@@ -64,11 +63,74 @@
   font-weight: 900;
   text-align: center;
   color: white;
-  text-shadow: 8px 6px 28px rgba(0,0,0,0.65);
+  text-shadow: 8px 6px 28px rgba(0, 0, 0, 0.65);
+}
+
+.feels-like {
+  font-size: 16px;
+  text-align: center;
+  color: white;
 }
 
 .info-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.info-container::before {
+  content: '';
+  position: absolute;
+  top: 68px;
+  left: 25px;
+  width: 90%;
+  height: 86%;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 0 0 30px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.info-text {
+  margin: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.min-temperature-container,
+.max-temperature-container,
+.humidity-container,
+.wind-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.min-temperature-image,
+.max-temperature-image,
+.humidity-image,
+.wind-image {
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  margin: 6px;
+}
+
+.min-temperature-text,
+.max-temperature-text,
+.humidity-text,
+.wind-text {
+  font-size: 22px;
+  color: white;
 }
