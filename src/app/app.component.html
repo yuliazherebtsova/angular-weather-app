@@ -1,17 +1,59 @@
 <div class="app-wrapper">
-  <div class="weather-container">
+  <div class="weather-container" *ngIf="weatherData$ | async as weather">
     <div class="image-container">
-      <img class="image" src="../assets/very-cold.jpeg" *ngIf="!true" />
-      <img class="image" src="../assets/cold.jpeg" *ngIf="!true" />
-      <img class="image" src="../assets/cool.jpeg" *ngIf="!true" />
-      <img class="image" src="../assets/warm.jpeg" *ngIf="!true" />
-      <img class="image" src="../assets/hot.jpeg" *ngIf="true" />
-      <img class="image" src="../assets/very-hot.jpeg" *ngIf="!true" />
+      <img
+        class="image"
+        src="../assets/very-hot.jpeg"
+        *ngIf="weather.main.temp < temperature.VeryHot"
+      />
+      <img
+        class="image"
+        src="../assets/hot.jpeg"
+        *ngIf="
+          weather.main.temp >= temperature.Hot &&
+          weather.main.temp < temperature.VeryHot
+        "
+      />
+      <img
+        class="image"
+        src="../assets/warm.jpeg"
+        *ngIf="
+          weather.main.temp >= temperature.Warm &&
+          weather.main.temp < temperature.Hot
+        "
+      />
+      <img
+        class="image"
+        src="../assets/cool.jpeg"
+        *ngIf="
+          weather.main.temp >= temperature.Cool &&
+          weather.main.temp < temperature.Warm
+        "
+      />
+      <img
+        class="image"
+        src="../assets/cold.jpeg"
+        *ngIf="
+          weather.main.temp >= temperature.Cold &&
+          weather.main.temp < temperature.Cool
+        "
+      />
+      <img
+        class="image"
+        src="../assets/very-cold.jpeg"
+        *ngIf="
+          weather.main.temp >= temperature.Cold &&
+          weather.main.temp < temperature.VeryCold
+        "
+      />
       <div class="temperature-container">
-        <span class="location">Winnipeg</span>
-        <span class="temperature">{{ -22.4 | number : "1.0-0" }}&deg;C</span>
+        <span class="location">Moscow</span>
+        <span class="temperature"
+          >{{ weather.main.temp | number : "1.0-0" }}&deg;C</span
+        >
         <span class="feels-like"
-          >feels like {{ 22.4 | number : "1.0-0" }}&deg;C</span
+          >feels like
+          {{ weather.main.feels_like | number : "1.0-0" }}&deg;C</span
         >
       </div>
       <div class="info-container">
@@ -20,22 +62,26 @@
           <div class="min-temperature-container">
             <img class="min-temperature-image" src="../assets/min.svg" />
             <span class="min-temperature-text"
-              >{{ -22.4 | number : "1.0-0" }}&deg;C</span
+              >{{ weather.main.temp_min | number : "1.0-0" }}&deg;C</span
             >
           </div>
           <div class="max-temperature-container">
             <img class="max-temperature-image" src="../assets/max.svg" />
             <span class="max-temperature-text"
-              >{{ 22.4 | number : "1.0-0" }}&deg;C</span
+              >{{ weather.main.temp_max | number : "1.0-0" }}&deg;C</span
             >
           </div>
           <div class="humidity-container">
             <img class="humidity-image" src="../assets/humidity.svg" />
-            <span class="humidity-text">{{ 80 | number : "1.0-0" }}%</span>
+            <span class="humidity-text"
+              >{{ weather.main.humidity | number : "1.0-0" }}%</span
+            >
           </div>
           <div class="wind-container">
             <img class="wind-image" src="../assets/wind.svg" />
-            <span class="wind-text">{{ 8 | number : "1.0-0" }}&nbsp;km/h</span>
+            <span class="wind-text"
+              >{{ weather.wind.speed | number : "1.0-0" }}&nbsp;km/h</span
+            >
           </div>
         </div>
       </div>
