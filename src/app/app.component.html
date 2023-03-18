@@ -4,54 +4,59 @@
       <img
         class="image"
         src="../assets/very-hot.jpeg"
-        *ngIf="weather.main.temp < temperature.VeryHot"
+        *ngIf="weather.main.temp >= temperature.VeryHot"
       />
       <img
         class="image"
         src="../assets/hot.jpeg"
         *ngIf="
-          weather.main.temp >= temperature.Hot &&
-          weather.main.temp < temperature.VeryHot
+          weather.main.temp < temperature.VeryHot &&
+          weather.main.temp >= temperature.Hot
         "
       />
       <img
         class="image"
         src="../assets/warm.jpeg"
         *ngIf="
-          weather.main.temp >= temperature.Warm &&
-          weather.main.temp < temperature.Hot
+          weather.main.temp < temperature.Hot &&
+          weather.main.temp >= temperature.Warm
+        "
+      />
+      <img
+        class="image"
+        src="../assets/moderate.jpeg"
+        *ngIf="
+          weather.main.temp <= temperature.Warm &&
+          weather.main.temp > temperature.Cool
         "
       />
       <img
         class="image"
         src="../assets/cool.jpeg"
         *ngIf="
-          weather.main.temp >= temperature.Cool &&
-          weather.main.temp < temperature.Warm
+          weather.main.temp <= temperature.Cool &&
+          weather.main.temp > temperature.Cold
         "
       />
       <img
         class="image"
         src="../assets/cold.jpeg"
         *ngIf="
-          weather.main.temp >= temperature.Cold &&
-          weather.main.temp < temperature.Cool
+          weather.main.temp <= temperature.Cold &&
+          weather.main.temp > temperature.VeryCold
         "
       />
       <img
         class="image"
         src="../assets/very-cold.jpeg"
-        *ngIf="
-          weather.main.temp >= temperature.Cold &&
-          weather.main.temp < temperature.VeryCold
-        "
+        *ngIf="weather.main.temp < temperature.VeryCold"
       />
       <div class="temperature-container">
-        <span class="location">Moscow</span>
-        <span class="temperature"
+        <span class="location title">Moscow</span>
+        <span class="temperature title"
           >{{ weather.main.temp | number : "1.0-0" }}&deg;C</span
         >
-        <span class="feels-like"
+        <span class="feels-like title"
           >feels like
           {{ weather.main.feels_like | number : "1.0-0" }}&deg;C</span
         >

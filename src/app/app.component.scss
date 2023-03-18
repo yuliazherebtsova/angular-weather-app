@@ -20,7 +20,6 @@
   backdrop-filter: blur(16.5px);
   -webkit-backdrop-filter: blur(16.5px);
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .image-container {
@@ -50,26 +49,25 @@
   height: 100%;
 }
 
+.title {
+  text-align: center;
+  color: white;
+  text-shadow: 8px 6px 28px rgba(-32, 0, 0, 1);
+}
+
 .location {
   font-size: 26px;
   font-weight: 800;
-  text-align: center;
-  color: white;
-  text-shadow: 8px 6px 28px rgba(0, 0, 0, 0.65);
 }
 
 .temperature {
   font-size: 54px;
   font-weight: 900;
-  text-align: center;
-  color: white;
-  text-shadow: 8px 6px 28px rgba(0, 0, 0, 0.65);
 }
 
 .feels-like {
-  font-size: 16px;
-  text-align: center;
-  color: white;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .info-container {
