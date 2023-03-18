@@ -4,12 +4,12 @@ import { WeatherData } from './models/weather.model';
 import { WeatherService } from './services/weather.service';
 
 enum Temperature {
-  VeryCold = -18,
-  Cold = -9,
+  VeryCold = -25,
+  Cold = -11,
   Cool = 6,
-  Warm = 15,
-  Hot = 20,
-  VeryHot = 27,
+  Warm = 14,
+  Hot = 23,
+  VeryHot = 30,
 }
 @Component({
   selector: 'app-root',
