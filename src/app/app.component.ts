@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GeolocationData } from './models/geolocation.model';
 import { WeatherData } from './models/weather.model';
+import { GeolocationService } from './services/geolocation.service';
 import { WeatherService } from './services/weather.service';
 
 enum Temperature {
@@ -20,10 +22,21 @@ export class AppComponent implements OnInit {
   weatherData$: Observable<WeatherData>;
   temperature = Temperature;
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(
+    private weatherService: WeatherService,
+    private geolocationService: GeolocationService
+  ) {}
 
   ngOnInit(): void {
     this.loadWeather();
+    this.geolocationService.getGeolocation().subscribe({
+      next: (res: GeolocationData) => {
+        console.log(res);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
   }
 
   private loadWeather(): void {

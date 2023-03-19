@@ -11,8 +11,7 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   getWeatherData(cityName: string): Observable<WeatherData> {
-    let params = new HttpParams();
-    params = params
+    const params = new HttpParams()
       .set('q', cityName)
       .set('units', 'metric')
       .set('mode', 'json')
