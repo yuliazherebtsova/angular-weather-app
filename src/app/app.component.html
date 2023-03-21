@@ -1,4 +1,9 @@
 <div class="app-wrapper">
+  <div class="search">
+    <form>
+      <input class="search-input" type="text" placeholder="Search city">
+    </form>
+  </div>
   <div class="weather-container" *ngIf="weatherData$ | async as weather">
     <div class="image-container">
       <img
