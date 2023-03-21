@@ -28,7 +28,7 @@ export interface GeolocationData {
   isEU: string
   countryTLD: string
   countryCapital: string
-  metroCode: any
+  metroCode: string
   continentGeoNameId: number
   stateCode: string
   countryISO2: string
