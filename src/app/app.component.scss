@@ -2,6 +2,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 16px;
   box-sizing: border-box;
@@ -51,7 +52,7 @@
 
 .title {
   text-align: center;
-  color: white;
+  color: var(--text-color-primary);
   text-shadow: 8px 6px 28px rgba(-32, 0, 0, 1);
 }
 
@@ -78,7 +79,7 @@
 }
 
 .info-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 68px;
   left: 25px;
@@ -94,7 +95,7 @@
 .info-text {
   margin: 30px;
   font-size: 20px;
-  color: white;
+  color: var(--text-color-primary);
 }
 
 .details-container {
@@ -128,5 +129,40 @@
 .humidity-text,
 .wind-text {
   font-size: 22px;
-  color: white;
+  color: var(--text-color-primary);
+}
+
+.search {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 14px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--text-color-primary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--text-color-secondary);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-color-primary);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text-color-primary);
 }

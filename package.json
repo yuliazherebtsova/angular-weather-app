@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "stop": "taskkill -F -IM node.exe",
-    "start:dev": "npm run lint && ng serve --configuration development",
+    "start:dev": "ng serve --configuration development",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

@@ -1,5 +1,10 @@
 @import "normalize.css";
 
+:root {
+  --text-color-primary: #fff;
+  --text-color-secondary: rgba(255, 255, 255, 0.691);
+}
+
 html,
 body {
   height: 100%;
