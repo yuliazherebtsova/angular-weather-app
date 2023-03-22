@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   weatherData$: Observable<WeatherData>;
   temperature = Temperature;
   currentCity: string;
+  searchCity: string;
 
   constructor(
     private weatherService: WeatherService,
@@ -31,13 +32,23 @@ export class AppComponent implements OnInit {
     this.loadWeather();
   }
 
+  onSearchCity(): void {
+    this.currentCity = this.searchCity;
+    this.loadWeather();
+    this.searchCity = '';
+  }
+
   private loadWeather(): void {
-    this.weatherData$ = this.geolocationService.getGeolocation().pipe(
-      concatMap(({ city, countryCapital }) => {
-        const currentCity = city ? city : countryCapital;
-        this.currentCity = currentCity;
-        return this.weatherService.getWeatherData(currentCity);
-      })
-    );
+    if (this.currentCity) {
+      this.weatherData$ = this.weatherService.getWeatherData(this.currentCity);
+    } else {
+      this.weatherData$ = this.geolocationService.getGeolocation().pipe(
+        concatMap(({ city, countryCapital }) => {
+          const currentCity = city ? city : countryCapital;
+          this.currentCity = currentCity;
+          return this.weatherService.getWeatherData(currentCity);
+        })
+      );
+    }
   }
 }

@@ -1,7 +1,13 @@
 <div class="app-wrapper">
   <div class="search">
-    <form>
-      <input class="search-input" type="text" placeholder="Search city">
+    <form #searchForm="ngForm" (submit)="onSearchCity()">
+      <input
+        class="search-input"
+        type="text"
+        placeholder="Search city"
+        name="city"
+        [(ngModel)]="searchCity"
+      />
     </form>
   </div>
   <div class="weather-container" *ngIf="weatherData$ | async as weather">
@@ -57,7 +63,7 @@
         *ngIf="weather.main.temp < temperature.VeryCold"
       />
       <div class="temperature-container">
-        <span class="location title">{{ currentCity }}</span>
+        <span class="location title">{{ currentCity | titlecase }}</span>
         <span class="temperature title"
           >{{ weather.main.temp | number : "1.0-0" }}&deg;C</span
         >
