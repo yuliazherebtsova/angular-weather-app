@@ -22,6 +22,20 @@
   backdrop-filter: blur(16.5px);
   -webkit-backdrop-filter: blur(16.5px);
   border-radius: 30px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    height: 28%;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(16.5px);
+    -webkit-backdrop-filter: blur(16.5px);
+    border-radius: 0 0 30px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
 }
 
 .image {
@@ -76,7 +90,7 @@
   justify-content: center;
 
   &-text {
-    margin: 30px;
+    margin: 26px;
     font-size: 20px;
     color: var(--text-color-primary);
   }
@@ -87,19 +101,6 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 68px;
-      left: 25px;
-      width: 90%;
-      height: 86%;
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(16.5px);
-      -webkit-backdrop-filter: blur(16.5px);
-      border-radius: 0 0 30px 30px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-    }
   }
 }
 
