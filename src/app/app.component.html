@@ -6,11 +6,20 @@
         type="text"
         placeholder="Search city"
         name="city"
-        [(ngModel)]="searchCity"
+        [ngModel]="searchCity | titleCase"
+        (ngModelChange)="searchCity = $event"
       />
     </form>
+    <img
+      class="search-icon"
+      src="../assets/search.png"
+      (click)="onSearchCity()"
+    />
   </div>
-  <div class="weather-container" *ngIf="weatherData$ | async as weather">
+  <div
+    class="weather-container"
+    *ngIf="weatherData$ | async as weather; else loading"
+  >
     <div class="image-container">
       <img
         class="image"
@@ -62,28 +71,28 @@
         src="../assets/very-cold.jpeg"
         *ngIf="weather.main.temp < temperature.VeryCold"
       />
-      <div class="temperature-container">
-        <span class="location title">{{ currentCity | titlecase }}</span>
-        <span class="temperature title"
+      <div class="temperature">
+        <span class="temperature-location">{{ currentCity | titlecase }}</span>
+        <span class="temperature-data"
           >{{ weather.main.temp | number : "1.0-0" }}&deg;C</span
         >
-        <span class="feels-like title"
+        <span class="temperature-feels-like"
           >feels like
           {{ weather.main.feels_like | number : "1.0-0" }}&deg;C</span
         >
       </div>
-      <div class="info-container">
-        <p class="info-text">More Information</p>
-        <div class="details-container">
-          <div class="min-temperature-container">
-            <img class="min-temperature-image" src="../assets/min.svg" />
-            <span class="min-temperature-text"
+      <div class="more-info">
+        <p class="more-info-text">More Information</p>
+        <div class="more-info-data">
+          <div class="min-container">
+            <img class="min-image" src="../assets/min.svg" />
+            <span class="min-text"
               >{{ weather.main.temp_min | number : "1.0-0" }}&deg;C</span
             >
           </div>
-          <div class="max-temperature-container">
-            <img class="max-temperature-image" src="../assets/max.svg" />
-            <span class="max-temperature-text"
+          <div class="max-container">
+            <img class="max-image" src="../assets/max.svg" />
+            <span class="max-text"
               >{{ weather.main.temp_max | number : "1.0-0" }}&deg;C</span
             >
           </div>
@@ -104,3 +113,15 @@
     </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <div class="loader">
+    <ul class="loader-list">
+      <li class="loader-element"></li>
+      <li class="loader-element"></li>
+      <li class="loader-element"></li>
+      <li class="loader-element"></li>
+      <li class="loader-element"></li>
+    </ul>
+  </div>
+</ng-template>
