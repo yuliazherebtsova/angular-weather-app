@@ -3,6 +3,7 @@ import { concatMap, Observable } from 'rxjs';
 import { WeatherData } from './models/weather.model';
 import { GeolocationService } from './services/geolocation.service';
 import { WeatherService } from './services/weather.service';
+import { Country }  from 'country-state-city';
 
 enum Temperature {
   VeryCold = -25,
@@ -30,6 +31,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadWeather();
+    console.log(Country.getAllCountries())
   }
 
   onSearchCity(): void {
