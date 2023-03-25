@@ -1,3 +1,5 @@
+@use '../mixins.scss' as mixins;
+
 .app-wrapper {
   position: relative;
   height: 100%;
@@ -70,6 +72,10 @@
   &-location {
     font-size: 32px;
     font-weight: 800;
+
+    @include mixins.for-phone-only {
+      font-size: 16px;
+    }
   }
 
   &-data {
