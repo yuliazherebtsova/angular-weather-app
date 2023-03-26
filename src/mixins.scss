@@ -4,12 +4,12 @@
   }
 }
 @mixin for-small-phone-only {
-  @media (max-width: 375px) {
+  @media (min-width: 321px) and (max-width: 375px) {
     @content;
   }
 }
 @mixin for-phone-only {
-  @media (max-width: 390px) {
+  @media (min-width: 376px) and (max-width: 390px) {
     @content;
   }
 }

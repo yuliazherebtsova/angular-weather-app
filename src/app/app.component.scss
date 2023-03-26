@@ -29,8 +29,8 @@
     content: "";
     position: absolute;
     bottom: 20px;
-    left: 5%;
-    width: 90%;
+    left: 4%;
+    width: 92%;
     height: 28%;
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(16.5px);
@@ -73,7 +73,7 @@
     font-size: 32px;
     font-weight: 800;
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
       font-size: 16px;
     }
   }
@@ -82,7 +82,7 @@
     font-size: 58px;
     font-weight: 900;
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
       font-size: 36px;
     }
   }
@@ -104,9 +104,14 @@
     font-size: 20px;
     color: var(--text-color-primary);
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
+      margin: 4px 14px;
       font-size: 16px;
-      margin: 6px;
+    }
+
+    @include mixins.for-small-phone-only {
+      margin: 14px;
+      font-size: 20px;
     }
   }
 
@@ -116,8 +121,16 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
       gap: 6px;
+    }
+
+    @include mixins.for-small-phone-only {
+      gap: 12px;
+    }
+
+    @include mixins.for-phone-only {
+      gap: 12px 0px;
     }
   }
 }
@@ -138,9 +151,14 @@
     height: 55px;
     margin: 6px;
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
       width: 36px;
       height: 36px;
+    }
+
+    @include mixins.for-small-phone-only {
+      width: 44px;
+      height: 44px;
     }
   }
 
@@ -148,8 +166,12 @@
     font-size: 22px;
     color: var(--text-color-primary);
 
-    @include mixins.for-phone-only {
+    @include mixins.for-extra-small-phone-only {
       font-size: 16px;
+    }
+
+    @include mixins.for-small-phone-only {
+      font-size: 20px;
     }
   }
 }
