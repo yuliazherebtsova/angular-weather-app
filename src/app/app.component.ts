@@ -23,6 +23,14 @@ export class AppComponent implements OnInit {
   temperature = Temperature;
   currentCity: string;
   searchCity: string;
+  selectedCar: number;
+
+  cars = [
+      { id: 1, name: 'Volvo' },
+      { id: 2, name: 'Saab' },
+      { id: 3, name: 'Opel' },
+      { id: 4, name: 'Audi' },
+  ];
 
   constructor(
     private weatherService: WeatherService,

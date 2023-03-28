@@ -1,4 +1,4 @@
-@use '../mixins.scss' as mixins;
+@use "../mixins.scss" as mixins;
 
 .app-wrapper {
   position: relative;
@@ -183,26 +183,26 @@
   margin-bottom: 18px;
   text-align: center;
 
-  &-input {
-    padding: 14px;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    text-align: center;
-    color: var(--text-color-primary);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(16.5px);
-    -webkit-backdrop-filter: blur(16.5px);
-  }
-
   &-icon {
     padding: 8px;
     width: 16px;
     height: 16px;
     cursor: pointer;
   }
+}
+
+ng-select.search-input {
+  padding: 14px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--text-color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
 }
 
 .loader {
