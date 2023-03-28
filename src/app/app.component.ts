@@ -26,10 +26,10 @@ export class AppComponent implements OnInit {
   selectedCar: number;
 
   cars = [
-      { id: 1, name: 'Volvo' },
-      { id: 2, name: 'Saab' },
-      { id: 3, name: 'Opel' },
-      { id: 4, name: 'Audi' },
+      { id: 1, name: 'Wellington' },
+      { id: 2, name: 'Berlin' },
+      { id: 3, name: 'Winnipeg' },
+      { id: 4, name: 'Sydney' },
   ];
 
   constructor(
