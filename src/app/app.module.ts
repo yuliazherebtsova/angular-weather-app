@@ -14,7 +14,8 @@ import { TitleCasePipe } from './pipes/title-case.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
