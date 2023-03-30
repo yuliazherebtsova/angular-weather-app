@@ -59,14 +59,32 @@ p {
   text-align: center;
 }
 
-.ng-select.search-input .ng-select-container .ng-value-container .ng-input > input {
+.ng-select.search-input
+  .ng-select-container
+  .ng-value-container
+  .ng-input
+  > input {
   color: var(--text-color-secondary);
 }
 
 .ng-dropdown-panel.search-input {
+  border: none;
   color: var(--text-color-secondary);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(16.5px);
   -webkit-backdrop-filter: blur(16.5px);
+}
+
+.ng-dropdown-panel.search-input .ng-dropdown-panel-items .ng-option {
+  opacity: 0.7;
+  color: var(--text-color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(16.5px);
+
+  &:hover {
+    opacity: 1;
+    color: var(--text-color-primary);
+  }
 }
