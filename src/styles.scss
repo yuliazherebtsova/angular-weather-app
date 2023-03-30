@@ -15,9 +15,8 @@ p {
   margin: 0;
 }
 
-ng-select.search-input .ng-select-container {
+.ng-select.search-input .ng-select-container {
   min-width: 176px;
-  padding: 14px;
   border-radius: 20px;
   font-size: 16px;
   border: none;
@@ -29,6 +28,35 @@ ng-select.search-input .ng-select-container {
   -webkit-backdrop-filter: blur(16.5px);
 }
 
-ng-select.search-input .ng-select-container .ng-value-container .ng-placeholder {
+.ng-select.search-input .ng-dropdown-panel {
+  border: red 1px;
+}
+
+.ng-select.search-input
+  .ng-select-container
+  .ng-value-container
+  .ng-placeholder {
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
+.ng-select.search-input .ng-select-container .ng-value-container {
+  padding: 0;
+  justify-content: center;
+}
+
+.ng-select.search-input .ng-arrow-wrapper,
+.ng-select.search-input .ng-clear-wrapper {
+  display: none;
+}
+
+.ng-select.search-input .ng-select-container .ng-value-container .ng-input {
+  top: 0;
+  left: 0;
+  padding: 6px 40px;
+  color: var(--text-color-secondary);
+}
+
+.ng-select.search-input .ng-select-container .ng-value-container .ng-input > input {
   color: var(--text-color-secondary);
 }
