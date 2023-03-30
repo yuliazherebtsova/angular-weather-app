@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { concatMap, Observable } from 'rxjs';
 import { WeatherData } from './models/weather.model';
 import { GeolocationService } from './services/geolocation.service';
 import { WeatherService } from './services/weather.service';
 import { Country } from 'country-state-city';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 enum Temperature {
   VeryCold = -25,
@@ -19,17 +20,19 @@ enum Temperature {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  @ViewChild('select') select: NgSelectComponent;
+
   weatherData$: Observable<WeatherData>;
   temperature = Temperature;
   currentCity: string;
   searchCity: string;
   selectedCar: number;
-
-  cars = [
-    { id: 1, name: 'Wellington' },
-    { id: 2, name: 'Berlin' },
-    { id: 3, name: 'Winnipeg' },
-    { id: 4, name: 'Sydney' },
+  cities = [
+    { id: 1, name: 'Vilnius' },
+    { id: 2, name: 'Kaunas' },
+    { id: 3, name: 'Pavilnys', disabled: true },
+    { id: 4, name: 'Pabradė' },
+    { id: 5, name: 'Klaipėda' },
   ];
 
   constructor(

@@ -11,15 +11,11 @@
       /> -->
       <ng-select
         class="search-input"
-        type="text"
         placeholder="Search city"
-        name="city"
-        [ngModel]="searchCity | titleCase"
-        (ngModelChange)="searchCity = $event"
+        [items]="cities"
+        bindLabel="name"
+        [(ngModel)]="searchCity"
       >
-        <ng-option *ngFor="let car of cars" [value]="car.id">{{
-          car.name
-        }}</ng-option>
       </ng-select>
     </form>
     <img
