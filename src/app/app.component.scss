@@ -11,7 +11,6 @@
   box-sizing: border-box;
   background: url(../assets/background.jpeg) center / cover no-repeat fixed;
   backdrop-filter: blur(15px);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .weather-container {
@@ -119,7 +118,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    gap: 60px 30px;
 
     @include mixins.for-extra-small-phone-only {
       gap: 6px;
