@@ -3,7 +3,7 @@ import { concatMap, Observable } from 'rxjs';
 import { WeatherData } from './models/weather.model';
 import { GeolocationService } from './services/geolocation.service';
 import { WeatherService } from './services/weather.service';
-import { Country }  from 'country-state-city';
+import { Country } from 'country-state-city';
 
 enum Temperature {
   VeryCold = -25,
@@ -26,10 +26,10 @@ export class AppComponent implements OnInit {
   selectedCar: number;
 
   cars = [
-      { id: 1, name: 'Wellington' },
-      { id: 2, name: 'Berlin' },
-      { id: 3, name: 'Winnipeg' },
-      { id: 4, name: 'Sydney' },
+    { id: 1, name: 'Wellington' },
+    { id: 2, name: 'Berlin' },
+    { id: 3, name: 'Winnipeg' },
+    { id: 4, name: 'Sydney' },
   ];
 
   constructor(
@@ -37,20 +37,10 @@ export class AppComponent implements OnInit {
     private geolocationService: GeolocationService
   ) {}
 
-  ngOnInit(): void {
-    this.loadWeather();
-    console.log(Country.getAllCountries())
-  }
-
-  onSearchCity(): void {
-    this.currentCity = this.searchCity;
-    this.loadWeather();
-    this.searchCity = '';
-  }
-
   private loadWeather(): void {
     if (this.currentCity) {
       this.weatherData$ = this.weatherService.getWeatherData(this.currentCity);
+      this.searchCity = this.currentCity;
     } else {
       this.weatherData$ = this.geolocationService.getGeolocation().pipe(
         concatMap(({ city, countryCapital }) => {
@@ -60,5 +50,16 @@ export class AppComponent implements OnInit {
         })
       );
     }
+  }
+
+  ngOnInit(): void {
+    this.loadWeather();
+    console.log(Country.getAllCountries());
+  }
+
+  onSearchCity(): void {
+    this.currentCity = this.searchCity;
+    this.loadWeather();
+    this.searchCity = '';
   }
 }
