@@ -1,14 +1,6 @@
 <div class="app-wrapper">
   <div class="search">
     <form #searchForm="ngForm" (submit)="onSearchCity()">
-      <!-- <input
-        class="search-input"
-        type="text"
-        placeholder="Search city"
-        name="city"
-        [ngModel]="searchCity | titleCase"
-        (ngModelChange)="searchCity = $event"
-      /> -->
       <ng-select
         class="search-input"
         placeholder="Search city"
