@@ -14,25 +14,31 @@ enum Temperature {
   Hot = 23,
   VeryHot = 30,
 }
+
+interface SearchCity {
+  id: number;
+  name: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('select') select: NgSelectComponent;
+  @ViewChild(NgSelectComponent) ngSelectComponent: NgSelectComponent;
 
   weatherData$: Observable<WeatherData>;
   temperature = Temperature;
   currentCity: string;
-  searchCity: string;
+  searchCity: SearchCity;
   selectedCar: number;
   cities = [
-    { id: 1, name: 'Vilnius' },
-    { id: 2, name: 'Kaunas' },
-    { id: 3, name: 'Pavilnys' },
-    { id: 4, name: 'Pabradė' },
-    { id: 5, name: 'Klaipėda' },
+    { id: 1, name: 'Moscow' },
+    { id: 2, name: 'Paris' },
+    { id: 3, name: 'London' },
+    { id: 4, name: 'Winnipeg' },
+    { id: 5, name: 'Sydney' },
   ];
 
   constructor(
@@ -43,7 +49,6 @@ export class AppComponent implements OnInit {
   private loadWeather(): void {
     if (this.currentCity) {
       this.weatherData$ = this.weatherService.getWeatherData(this.currentCity);
-      this.searchCity = this.currentCity;
     } else {
       this.weatherData$ = this.geolocationService.getGeolocation().pipe(
         concatMap(({ city, countryCapital }) => {
@@ -61,8 +66,8 @@ export class AppComponent implements OnInit {
   }
 
   onSearchCity(): void {
-    this.currentCity = this.searchCity;
+    this.currentCity = this.searchCity.name;
     this.loadWeather();
-    this.searchCity = '';
+    this.ngSelectComponent.handleClearClick();
   }
 }

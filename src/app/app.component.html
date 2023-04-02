@@ -3,12 +3,12 @@
     <form #searchForm="ngForm" (submit)="onSearchCity()">
       <ng-select
         class="search-input"
+        appendTo="body"
         placeholder="Search city"
         [items]="cities"
-        name="searchForm"
         bindLabel="name"
+        name="searchCity"
         [(ngModel)]="searchCity"
-        appendTo="body"
       >
       </ng-select>
     </form>
