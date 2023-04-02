@@ -1,14 +1,16 @@
 <div class="app-wrapper">
   <div class="search">
     <form #searchForm="ngForm" (submit)="onSearchCity()">
-      <input
+      <ng-select
         class="search-input"
-        type="text"
+        appendTo="body"
         placeholder="Search city"
-        name="city"
-        [ngModel]="searchCity | titleCase"
-        (ngModelChange)="searchCity = $event"
-      />
+        [items]="cities"
+        bindLabel="name"
+        name="searchCity"
+        [(ngModel)]="searchCity"
+      >
+      </ng-select>
     </form>
     <img
       class="search-icon"
