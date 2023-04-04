@@ -16,7 +16,7 @@
     </form>
     <img
       class="search-icon"
-      src="../assets/search.png"
+      src="assets/search.png"
       (click)="onSearchCity()"
     />
   </div>
@@ -27,12 +27,12 @@
     <div class="image-container">
       <img
         class="image"
-        src="../assets/very-hot.jpeg"
+        src="assets/very-hot.jpeg"
         *ngIf="weather.main.temp >= temperature.VeryHot"
       />
       <img
         class="image"
-        src="../assets/hot.jpeg"
+        src="assets/hot.jpeg"
         *ngIf="
           weather.main.temp < temperature.VeryHot &&
           weather.main.temp >= temperature.Hot
@@ -40,7 +40,7 @@
       />
       <img
         class="image"
-        src="../assets/warm.jpeg"
+        src="assets/warm.jpeg"
         *ngIf="
           weather.main.temp < temperature.Hot &&
           weather.main.temp >= temperature.Warm
@@ -48,7 +48,7 @@
       />
       <img
         class="image"
-        src="../assets/moderate.jpeg"
+        src="assets/moderate.jpeg"
         *ngIf="
           weather.main.temp <= temperature.Warm &&
           weather.main.temp > temperature.Cool
@@ -56,7 +56,7 @@
       />
       <img
         class="image"
-        src="../assets/cool.jpeg"
+        src="assets/cool.jpeg"
         *ngIf="
           weather.main.temp <= temperature.Cool &&
           weather.main.temp > temperature.Cold
@@ -64,7 +64,7 @@
       />
       <img
         class="image"
-        src="../assets/cold.jpeg"
+        src="assets/cold.jpeg"
         *ngIf="
           weather.main.temp <= temperature.Cold &&
           weather.main.temp > temperature.VeryCold
@@ -72,7 +72,7 @@
       />
       <img
         class="image"
-        src="../assets/very-cold.jpeg"
+        src="assets/very-cold.jpeg"
         *ngIf="weather.main.temp < temperature.VeryCold"
       />
       <div class="temperature">
@@ -89,25 +89,25 @@
         <p class="more-info-text">More Information</p>
         <div class="more-info-data">
           <div class="min-container">
-            <img class="min-image" src="../assets/min.svg" />
+            <img class="min-image" src="assets/min.svg" />
             <span class="min-text"
               >{{ weather.main.temp_min | number : "1.0-0" }}&deg;C</span
             >
           </div>
           <div class="max-container">
-            <img class="max-image" src="../assets/max.svg" />
+            <img class="max-image" src="assets/max.svg" />
             <span class="max-text"
               >{{ weather.main.temp_max | number : "1.0-0" }}&deg;C</span
             >
           </div>
           <div class="humidity-container">
-            <img class="humidity-image" src="../assets/humidity.svg" />
+            <img class="humidity-image" src="assets/humidity.svg" />
             <span class="humidity-text"
               >{{ weather.main.humidity | number : "1.0-0" }}%</span
             >
           </div>
           <div class="wind-container">
-            <img class="wind-image" src="../assets/wind.svg" />
+            <img class="wind-image" src="assets/wind.svg" />
             <span class="wind-text"
               >{{ weather.wind.speed | number : "1.0-0" }}&nbsp;km/h</span
             >
