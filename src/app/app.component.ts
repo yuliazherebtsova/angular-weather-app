@@ -1,9 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { concatMap, Observable } from 'rxjs';
+import {
+  catchError,
+  concat,
+  concatMap,
+  distinctUntilChanged,
+  Observable,
+  of,
+  Subject,
+  switchMap,
+} from 'rxjs';
 import { WeatherData } from './models/weather.model';
 import { GeolocationService } from './services/geolocation.service';
 import { WeatherService } from './services/weather.service';
-import { Country } from 'country-state-city';
+import { City } from 'country-state-city';
 import { NgSelectComponent } from '@ng-select/ng-select';
 
 enum Temperature {
@@ -28,18 +37,13 @@ interface SearchCity {
 export class AppComponent implements OnInit {
   @ViewChild(NgSelectComponent) ngSelectComponent: NgSelectComponent;
 
+  currentCity: string;
+  selectedCity: SearchCity;
+  cityInput$ = new Subject<string>();
   weatherData$: Observable<WeatherData>;
   temperature = Temperature;
-  currentCity: string;
-  searchCity: SearchCity;
   selectedCar: number;
-  cities = [
-    { id: 1, name: 'Moscow' },
-    { id: 2, name: 'Paris' },
-    { id: 3, name: 'London' },
-    { id: 4, name: 'Winnipeg' },
-    { id: 5, name: 'Sydney' },
-  ];
+  cities$: Observable<SearchCity[]>;
 
   constructor(
     private weatherService: WeatherService,
@@ -60,13 +64,39 @@ export class AppComponent implements OnInit {
     }
   }
 
+  private getSearchCities(term: string): Observable<SearchCity[]> {
+    const cities = City.getAllCities();
+    const filteredCities = cities
+      .filter((city) => city.name.toLowerCase().startsWith(term?.toLowerCase()))
+      .map((city, index) => ({
+        id: index,
+        name: city.name,
+        nameWithCountry: `${city.name}, ${city.countryCode}`,
+      }));
+    return of(filteredCities);
+  }
+
+  private createSearchCities() {
+    this.cities$ = concat(
+      of([]), // default items
+      this.cityInput$.pipe(
+        distinctUntilChanged(),
+        switchMap((term) =>
+          this.getSearchCities(term).pipe(
+            catchError(() => of([])) // empty list on error
+          )
+        )
+      )
+    );
+  }
+
   ngOnInit(): void {
     this.loadWeather();
-    console.log(Country.getAllCountries());
+    this.createSearchCities();
   }
 
   onSearchCity(): void {
-    this.currentCity = this.searchCity.name;
+    this.currentCity = this.selectedCity?.name;
     this.loadWeather();
     this.ngSelectComponent.handleClearClick();
   }

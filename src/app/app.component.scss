@@ -165,12 +165,12 @@
     font-size: 22px;
     color: var(--text-color-primary);
 
-    @include mixins.for-extra-small-phone-only {
-      font-size: 16px;
-    }
-
     @include mixins.for-small-phone-only {
       font-size: 20px;
+    }
+
+    @include mixins.for-extra-small-phone-only {
+      font-size: 16px;
     }
   }
 }
@@ -181,6 +181,14 @@
   align-items: center;
   margin-bottom: 18px;
   text-align: center;
+
+  @include mixins.for-small-phone-only {
+    margin-bottom: 10px;
+  }
+
+  @include mixins.for-extra-small-phone-only {
+    margin-bottom: 8px;
+  }
 
   &-icon {
     padding: 8px;
