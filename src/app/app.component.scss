@@ -95,16 +95,17 @@
     }
 
     @include mixins.for-extra-small-phone-only {
-      margin: 16px;
+      margin: 14px 16px;
       font-size: 16px;
     }
   }
 
   &-data {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    gap: 30px 60px;
 
     @include mixins.for-extra-small-phone-only {
       gap: 6px;
@@ -127,13 +128,12 @@
   &-container {
     z-index: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 
   &-image {
-    width: 55px;
-    height: 55px;
+    width: 54px;
+    height: 54px;
     margin: 6px;
 
     @include mixins.for-extra-small-phone-only {
