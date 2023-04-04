@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  private getSearchCities(term: string): Observable<SearchCity[]> {
+  private createSearchCities(term: string): Observable<SearchCity[]> {
     const cities = City.getAllCities();
     const filteredCities = cities
       .filter((city) => city.name.toLowerCase().startsWith(term?.toLowerCase()))
@@ -75,13 +75,13 @@ export class AppComponent implements OnInit {
     return of(filteredCities);
   }
 
-  private createSearchCities() {
+  private loadSearchCities() {
     this.cities$ = concat(
       of([]),
       this.cityInput$.pipe(
         distinctUntilChanged(),
         switchMap((term) =>
-          this.getSearchCities(term).pipe(
+          this.createSearchCities(term).pipe(
             catchError(() => of([]))
           )
         )
@@ -90,8 +90,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadSearchCities();
     this.loadWeather();
-    this.createSearchCities();
   }
 
   onSearchCity(): void {
