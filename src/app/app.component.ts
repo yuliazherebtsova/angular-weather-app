@@ -52,13 +52,12 @@ export class AppComponent implements OnInit {
 
   private loadWeather(): void {
     if (this.currentCity) {
-      this.weatherData$ = this.weatherService.getWeatherData(this.currentCity);
+      this.weatherData$ = this.weatherService.getWeatherDataByCity(this.currentCity);
     } else {
       this.weatherData$ = this.geolocationService.getGeolocation().pipe(
-        concatMap(({ city, countryCapital }) => {
-          const currentCity = city ? city : countryCapital;
-          this.currentCity = currentCity;
-          return this.weatherService.getWeatherData(currentCity);
+        concatMap(({latitude, longitude, city}) => {
+          this.currentCity = city;
+          return this.weatherService.getWeatherDataByCoordinates({latitude, longitude});
         })
       );
     }
