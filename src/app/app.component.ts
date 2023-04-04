@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
       .map((city, index) => ({
         id: index,
         name: city.name,
-        nameWithCountry: `${city.name}, ${city.countryCode}`,
+        nameWithCountry: `${city.name}, ${city.stateCode}, ${city.countryCode}`,
       }));
     return of(filteredCities);
   }
