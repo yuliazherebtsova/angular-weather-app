@@ -78,12 +78,12 @@ export class AppComponent implements OnInit {
 
   private createSearchCities() {
     this.cities$ = concat(
-      of([]), // default items
+      of([]),
       this.cityInput$.pipe(
         distinctUntilChanged(),
         switchMap((term) =>
           this.getSearchCities(term).pipe(
-            catchError(() => of([])) // empty list on error
+            catchError(() => of([]))
           )
         )
       )
