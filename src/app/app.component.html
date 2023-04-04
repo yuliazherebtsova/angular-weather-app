@@ -5,10 +5,12 @@
         class="search-input"
         appendTo="body"
         placeholder="Search city"
-        [items]="cities"
-        bindLabel="name"
+        [items]="cities$ | async"
+        bindLabel="nameWithCountry"
         name="searchCity"
-        [(ngModel)]="searchCity"
+        [(ngModel)]="selectedCity"
+        [typeahead]="cityInput$"
+        [minTermLength]="3"
       >
       </ng-select>
     </form>
