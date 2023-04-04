@@ -45,9 +45,10 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "20mb"
                 }
               ],
+              "baseHref": "https://yuliazherebtsova.github.io/angular-weather-app/",
               "outputHashing": "all"
             },
             "development": {
