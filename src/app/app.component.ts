@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     } else {
       this.weatherData$ = this.geolocationService.getGeolocation().pipe(
         concatMap(({latitude, longitude, city}) => {
-          this.currentCity = city;
+          this.currentCity = typeof city === 'string' ? city : "Current Location";
           return this.weatherService.getWeatherDataByCoordinates({latitude, longitude});
         })
       );
