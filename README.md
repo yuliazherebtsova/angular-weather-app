@@ -1,22 +1,46 @@
-# AngularWeatherApp
+# Angular Weather App
 
-## Development server
+> Live demo [here](https://yuliazherebtsova.github.io/angular-weather-app/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
 
-## Code scaffolding
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## General Information
 
-## Build
+Simple weather applicaction, a pet-project to learn Angular framework main features.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application shows current weather at your location or you can select other city.
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular 15
+- RxJS
+- Typescript
+- Adaptive layout, SCSS
+- [WhatIsMyIp API](https://www.whatismyip.com/)
+- [OpenWeather API](https://openweathermap.org/api)
+- [Rapid API](https://rapidapi.com/hub)
 
-## Running end-to-end tests
+## Screenshots
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<p align="center">
+  <img src="./src/assets/screenshots/1.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/2.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/3.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/4.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/5.PNG" max-width="250" height="400">
+</p>
 
+## Setup
+
+Clone this repository and checkout `main` branch.
+
+Run `npm install`
+
+Run `npm start` (or `npm run start:dev` for dev mode)
+
+Application runs at `http://localhost:4200` and can be viewed in browsers.
