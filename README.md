@@ -11,17 +11,17 @@
 
 ## General Information
 
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+Simple weather applicaction, a pet-project to learn Angular fremework main features 
 
 ## Technologies Used
 
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Angular 15
+- RxJS
+- Typescript
+- Adaptive layout, SCSS
+- [WhatIsMyIp API](https://www.whatismyip.com/)
+- [OpenWeather API](https://openweathermap.org/api)
+- [Rapid API](https://rapidapi.com/hub)
 
 ## Screenshots
 
