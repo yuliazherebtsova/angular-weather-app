@@ -1,6 +1,4 @@
-# AngularWeatherApp
-
-> Outline a brief description of your project.
+# Angular Weather App
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
