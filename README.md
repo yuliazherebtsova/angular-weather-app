@@ -22,7 +22,7 @@
 
 
 ## Screenshots
-<img src="./src/assets/screenshots/1.PNG" min-width="200"><img src="./src/assets/screenshots/2.PNG" min-width="200"><img src="./src/assets/screenshots/3.PNG" min-width="200"><img src="./src/assets/screenshots/4.PNG" min-width="200"><img src="./src/assets/screenshots/5.PNG" min-width="200">
+<img src="./src/assets/screenshots/1.PNG" max-width="200"><img src="./src/assets/screenshots/2.PNG" max-width="200"><img src="./src/assets/screenshots/3.PNG" min-width="200"><img src="./src/assets/screenshots/4.PNG" min-width="200"><img src="./src/assets/screenshots/5.PNG" min-width="200">
 
 ## Setup
 Clone this repository and checkout ```main``` branch.
