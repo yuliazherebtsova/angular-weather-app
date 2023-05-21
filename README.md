@@ -26,11 +26,11 @@
 ## Screenshots
 
 <p align="center">
-  <img src="./src/assets/screenshots/1.PNG" width="250" height="400">
-  <img src="./src/assets/screenshots/2.PNG" width="250" height="400">
-  <img src="./src/assets/screenshots/3.PNG" width="250" height="400">
-  <img src="./src/assets/screenshots/4.PNG" width="250" height="400">
-  <img src="./src/assets/screenshots/5.PNG" width="250" height="400">
+  <img src="./src/assets/screenshots/1.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/2.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/3.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/4.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/5.PNG" max-width="250" height="400">
 </p>
 
 ## Setup
