@@ -11,7 +11,9 @@
 
 ## General Information
 
-Simple weather applicaction, a pet-project to learn Angular fremework main features 
+Simple weather applicaction, a pet-project to learn Angular framework main features.
+
+The application shows current weather at your location or you can select other city.
 
 ## Technologies Used
 
