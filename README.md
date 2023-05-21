@@ -1,5 +1,5 @@
 # Angular Weather App
-> Live demo [_here_](https://www.example.com).
+> Live demo [_here_](https://yuliazherebtsova.github.io/angular-weather-app/).
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
