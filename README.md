@@ -1,6 +1,5 @@
 # Angular Weather App
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
+> Live demo [_here_](https://www.example.com).
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
@@ -30,10 +29,11 @@
 <img src="./src/assets/screenshots/5.PNG" width="200">
 
 ## Setup
-To run this project, install it locally using npm:
+Clone this repository and checkout ```main``` branch.
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+Run ```npm install```
+
+Run ```npm start``` (or ```npm run start:dev``` for dev mode)
+
+Application runs at ```http://localhost:4200``` and can be viewed in browsers.
+
