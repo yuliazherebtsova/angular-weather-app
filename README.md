@@ -1,27 +1,46 @@
-# AngularWeatherApp
+# Angular Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+> Live demo [here](https://yuliazherebtsova.github.io/angular-weather-app/).
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
 
-## Code scaffolding
+## General Information
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Simple weather applicaction, a pet-project to learn Angular framework main features.
 
-## Build
+The application shows current weather at your location or you can select other city.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used
 
-## Running unit tests
+- Angular 15
+- RxJS
+- Typescript
+- Adaptive layout, SCSS
+- [WhatIsMyIp API](https://www.whatismyip.com/)
+- [OpenWeather API](https://openweathermap.org/api)
+- [Rapid API](https://rapidapi.com/hub)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Screenshots
 
-## Running end-to-end tests
+<p align="center">
+  <img src="./src/assets/screenshots/1.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/2.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/3.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/4.PNG" max-width="250" height="400">
+  <img src="./src/assets/screenshots/5.PNG" max-width="250" height="400">
+</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup
 
-## Further help
+Clone this repository and checkout `main` branch.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `npm install`
+
+Run `npm start` (or `npm run start:dev` for dev mode)
+
+Application runs at `http://localhost:4200` and can be viewed in browsers.

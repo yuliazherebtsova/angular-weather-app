@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@import "normalize.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+:root {
+  --text-color-primary: #fff;
+  --text-color-secondary: rgba(255, 255, 255, 0.691);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.ng-select.search-input .ng-select-container {
+  min-width: 244px;
+  border-radius: 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--text-color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+}
+
+.ng-select.search-input
+  .ng-select-container
+  .ng-value-container
+  .ng-placeholder {
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
+.ng-select.search-input .ng-select-container .ng-value-container {
+  padding: 0;
+  justify-content: center;
+}
+
+.ng-select.search-input .ng-arrow-wrapper,
+.ng-select.search-input .ng-clear-wrapper {
+  display: none;
+}
+
+.ng-select.search-input .ng-select-container .ng-value-container .ng-input {
+  top: 0;
+  left: 0;
+  padding: 6px 40px;
+  color: var(--text-color-secondary);
+}
+
+.ng-dropdown-panel.search-input .ng-dropdown-panel-items .ng-option {
+  color: var(--text-color-secondary);
+  text-align: center;
+}
+
+.ng-select.search-input
+  .ng-select-container
+  .ng-value-container
+  .ng-input
+  > input {
+  color: var(--text-color-secondary);
+}
+
+.ng-dropdown-panel.search-input {
+  border: none;
+  color: var(--text-color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+}
+
+.ng-dropdown-panel.search-input .ng-dropdown-panel-items .ng-option {
+  color: var(--text-color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(16.5px);
+
+  &:hover {
+    color: var(--text-color-primary);
+  }
+}
