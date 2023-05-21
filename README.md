@@ -72,9 +72,11 @@ List the ready features here:
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
-
+<img src="./src/assets/screenshots/1.PNG" width="200">
+<img src="./src/assets/screenshots/2.PNG" width="200">
+<img src="./src/assets/screenshots/3.PNG" width="200">
+<img src="./src/assets/screenshots/4.PNG" width="200">
+<img src="./src/assets/screenshots/5.PNG" width="200">
 
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
