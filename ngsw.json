@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686954301981,
+  "timestamp": 1686955040471,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,11 +12,12 @@
       },
       "urls": [
         "/index.html",
-        "/main.830ec2eff8f2d45f.js",
+        "/main.f37618e5ad4580c0.js",
         "/manifest.webmanifest",
         "/polyfills.b59a383e070cd77b.js",
         "/runtime.c56cddbcbc9e6152.js",
-        "/styles.98fa7cced1260207.css"
+        "/scripts.4e6d6f582996c29b.js",
+        "/styles.bfc18c34a43bcf38.css"
       ],
       "patterns": []
     },
@@ -47,7 +48,9 @@
         "/assets/very-hot.jpeg",
         "/assets/warm.jpeg",
         "/assets/wind.png",
-        "/background.f26f51c8ef403efe.jpeg"
+        "/background.f26f51c8ef403efe.jpeg",
+        "/bootstrap-icons.02685dabe0850e40.woff2",
+        "/bootstrap-icons.8463cb1e163733b5.woff"
       ],
       "patterns": []
     }
@@ -74,12 +77,15 @@
     "/assets/warm.jpeg": "bb54e8ab0e739d30bc7c10d355c1e0791e3b547c",
     "/assets/wind.png": "1ef0a8f0a78d2a595c11fcda020a99def2ad9a81",
     "/background.f26f51c8ef403efe.jpeg": "1dd308d3699128807c71c6ddeb89fe13020930e7",
-    "/index.html": "4d83682094dbfb60763513bac324d03055b1717c",
-    "/main.830ec2eff8f2d45f.js": "012bc0b0245a9b46e4c7d9f4d77122619409c7d6",
+    "/bootstrap-icons.02685dabe0850e40.woff2": "4c0efcf1dccc7295efc26fabe81ffe8f28d594a3",
+    "/bootstrap-icons.8463cb1e163733b5.woff": "d598cc620458b22d80443cdd69100217316efaf3",
+    "/index.html": "83b5968e53aafb888d9f87b085ff8a9747dccfbf",
+    "/main.f37618e5ad4580c0.js": "3ef8e9dfcc4f687eb4bd02720cc7a9aa65f9a720",
     "/manifest.webmanifest": "27e832a30d93c5816f232a2cfa2091b59399a2f5",
     "/polyfills.b59a383e070cd77b.js": "5b58e859cda8d9b32acc231c41c119d4f212b5e7",
     "/runtime.c56cddbcbc9e6152.js": "804b952713d502d873479b61afd64eb4a52cfc51",
-    "/styles.98fa7cced1260207.css": "a9da52ea3a8c508847f3b6fadd834470c9ce2c1f"
+    "/scripts.4e6d6f582996c29b.js": "29c30a65d63ff6182f039da88f0f07af3ebfbd1a",
+    "/styles.bfc18c34a43bcf38.css": "6949f35134395ac00fbed03547467ec9cac056e5"
   },
   "navigationUrls": [
     {
