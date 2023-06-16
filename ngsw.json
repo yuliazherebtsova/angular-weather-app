@@ -1,0 +1,103 @@
+{
+  "configVersion": 1,
+  "timestamp": 1686958512789,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main.2b77354713cb7d5e.js",
+        "/manifest.webmanifest",
+        "/polyfills.b59a383e070cd77b.js",
+        "/runtime.c56cddbcbc9e6152.js",
+        "/styles.98fa7cced1260207.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/background.jpeg",
+        "/assets/cold.jpeg",
+        "/assets/cool.jpeg",
+        "/assets/favicon.png",
+        "/assets/hot.jpeg",
+        "/assets/humidity.png",
+        "/assets/max.png",
+        "/assets/min.png",
+        "/assets/moderate.jpeg",
+        "/assets/screenshots/1.PNG",
+        "/assets/screenshots/2.PNG",
+        "/assets/screenshots/3.PNG",
+        "/assets/screenshots/4.PNG",
+        "/assets/screenshots/5.PNG",
+        "/assets/search.png",
+        "/assets/very-cold.jpeg",
+        "/assets/very-hot.jpeg",
+        "/assets/warm.jpeg",
+        "/assets/wind.png",
+        "/background.f26f51c8ef403efe.jpeg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/background.jpeg": "1dd308d3699128807c71c6ddeb89fe13020930e7",
+    "/assets/cold.jpeg": "3dd9de0dfcb516d60490e82c1d82a52f239e1cc1",
+    "/assets/cool.jpeg": "b4953045cffad0be9f4f44f750e2931735d952a7",
+    "/assets/favicon.png": "29a8fe08bb35577f4536cadd85ec1efc67568ccb",
+    "/assets/hot.jpeg": "96114d3e81ed9732445e1b14583db1fe2563dbde",
+    "/assets/humidity.png": "115462cafe0f73f5abc490a705758ba3481581dc",
+    "/assets/max.png": "ac7acb5c6d5a8c04c5134072c80324ce67f37ea1",
+    "/assets/min.png": "38872e0727d22d86fb90046e5d4f7d08e4ab0b39",
+    "/assets/moderate.jpeg": "6e93815ac5acd09e2a09b955256498887b089056",
+    "/assets/screenshots/1.PNG": "ab5c3ffb8c4278b739fba061beecca8e904bb1dd",
+    "/assets/screenshots/2.PNG": "6b125d501d336f5a18c5399cb57336044d78b8d5",
+    "/assets/screenshots/3.PNG": "e515cd44e0a7d935e3181cb2c6cabd07b024f6cf",
+    "/assets/screenshots/4.PNG": "c8bff9d92458dead61d12d9c229534894de0914b",
+    "/assets/screenshots/5.PNG": "637acdb845189da8dc8b987734f7450b946174d4",
+    "/assets/search.png": "50509bf72e63f7e022f0620449dbbb7e8411cfc5",
+    "/assets/very-cold.jpeg": "dffb5053f0713c719010858583693bfc1791e9f7",
+    "/assets/very-hot.jpeg": "08a76323e0306da11dca1433800a84f7145eb819",
+    "/assets/warm.jpeg": "bb54e8ab0e739d30bc7c10d355c1e0791e3b547c",
+    "/assets/wind.png": "1ef0a8f0a78d2a595c11fcda020a99def2ad9a81",
+    "/background.f26f51c8ef403efe.jpeg": "1dd308d3699128807c71c6ddeb89fe13020930e7",
+    "/index.html": "7e0435b086adb82856e204b654f0b9514c26818c",
+    "/main.2b77354713cb7d5e.js": "7deee3274609381193956ccfc74d5222a6fbf7ac",
+    "/manifest.webmanifest": "c104c28a49fe389cb387bf2b54756aeae8e7232e",
+    "/polyfills.b59a383e070cd77b.js": "5b58e859cda8d9b32acc231c41c119d4f212b5e7",
+    "/runtime.c56cddbcbc9e6152.js": "804b952713d502d873479b61afd64eb4a52cfc51",
+    "/styles.98fa7cced1260207.css": "a9da52ea3a8c508847f3b6fadd834470c9ce2c1f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
