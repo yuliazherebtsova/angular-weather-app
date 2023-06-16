@@ -1,8 +1,8 @@
 {
   "name": "j weather",
   "short_name": "j weather",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "theme_color": "#fafafa",
+  "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
@@ -11,7 +11,7 @@
       "src": "assets/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable any"
     }
   ]
 }
