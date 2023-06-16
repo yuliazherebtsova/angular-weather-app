@@ -11,7 +11,7 @@
       "src": "assets/favicon.png",
       "sizes": "72x72",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
     }
   ]
 }
