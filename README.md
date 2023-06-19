@@ -11,7 +11,7 @@
 
 ## General Information
 
-Simple weather applicaction, a pet-project to learn Angular framework main features.
+Simple weather applicaction, a pet-project to learn Angular framework main features and PWA technology.
 
 The application shows current weather at your location or you can select other city.
 
@@ -20,6 +20,7 @@ The application shows current weather at your location or you can select other c
 - Angular 15
 - RxJS
 - Typescript
+- Progressive Web App (PWA)
 - Adaptive layout, SCSS
 - [WhatIsMyIp API](https://www.whatismyip.com/)
 - [OpenWeather API](https://openweathermap.org/api)
