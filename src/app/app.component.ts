@@ -66,7 +66,6 @@ export class AppComponent implements OnInit {
 
   private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
-    console.info(`isOnline=[${this.isOnline}]`);
   }
 
   private loadWeather(): void {
