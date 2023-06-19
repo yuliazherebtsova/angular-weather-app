@@ -1,4 +1,34 @@
 <div class="app-wrapper">
+  <div class="pwa-modal-container" *ngIf="modalVersion">
+    <div class="pwa-modal">
+      <a
+        class="pwa-modal-close-btn"
+        (click)="closeVersion()"
+      >Close</a>
+      A new version of this app is available <a href="" (click)="updateVersion()">Update now</a>
+    </div>
+  </div>
+  <div class="pwa-modal-container" *ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'">
+    <div class="pwa-modal">
+      <a
+        class="pwa-modal-close-btn"
+        (click)="closePwa()"
+      >Close</a>
+      <!-- Android -->
+      <div *ngIf="modalPwaPlatform === 'ANDROID'" (click)="addToHomeScreen()">
+        Click on this modal to install this WEB app to home screen
+      </div>
+      <!-- iOS with Safari -->
+      <div *ngIf="modalPwaPlatform === 'IOS'">
+        To install this WEB app on your device, tap the "Menu" button
+        <img
+          src="assets/upload.svg"
+          class="pwa-modal-ios-menu"
+        />
+        and then "Add to home screen"
+      </div>
+    </div>
+  </div>
   <div class="search">
     <form #searchForm="ngForm" (submit)="onSearchCity()">
       <ng-select
@@ -14,11 +44,7 @@
       >
       </ng-select>
     </form>
-    <img
-      class="search-icon"
-      src="assets/search.png"
-      (click)="onSearchCity()"
-    />
+    <img class="search-icon" src="assets/search.png" (click)="onSearchCity()" />
   </div>
   <div
     class="weather-container"
